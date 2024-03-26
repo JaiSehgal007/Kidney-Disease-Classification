@@ -1,10 +1,14 @@
 import tensorflow as tf
+import os
 from pathlib import Path
 import mlflow
 import mlflow.keras
 from urllib.parse import urlparse
 from KidneyDiseaseClassifier.utils.common import save_json
 from KidneyDiseaseClassifier.config.configuration import EvaluationConfig
+
+# set MLFLOW_TRACKING_USERNAME=<username>
+# set MLFLOW_TRACKING_PASSWORD=<password/token>
 
 class Evaluation:
     def __init__(self, config: EvaluationConfig):
